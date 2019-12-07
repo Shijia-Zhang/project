@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.db.models import Count
 
 from .models import Squirrel
 from .forms import SquirrelForm
@@ -20,12 +21,7 @@ def add_squirrel(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/')
-    if request.method == 'GET':
-        form = SquirrelForm(request.GET)
-        if form.is_valid():
-            form.save()
-            return resirect(f'/sighings/')
+            return redirect('/sightings/')
     else:
         form = SquirrelForm()
 
@@ -42,7 +38,7 @@ def update_squirrel(request,unique_squirrel_ID):
         form = SquirrelForm(request.POST, instance=squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/')
+            return redirect('/sightings/')
     else:
         form = SquirrelForm(instance=squirrel)
 
