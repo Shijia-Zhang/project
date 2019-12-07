@@ -54,3 +54,15 @@ def map(request):
             'squirrels':squirrels,
     }
     return render(request, 'squirrel/map.html', context)
+
+def stats(request): 
+    total_count = Squirrel.objects.all().count() 
+    running_true = Squirrel.objects.filter(running=True).count() 
+    running_false = Squirrel.objects.filter(running=False).count()
+    running_pct = "{:.2%}".format(running_true/total_count) 
+    context = { 
+            'total_count' : total_count, 
+            'running_true' : running_true, 
+            'running_false' : running_false,
+            'running_pct' : running_pct, } 
+    return render(request, 'squirrel/stats.html',context)

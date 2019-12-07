@@ -1,9 +1,16 @@
 <!doctype html>
 <html>
-  <title>Stats of Sightings</title>
+<head>
+  <meta charset = 'utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </br>
+  <title>Summary of Sightings</title>
+  <h3><center>Summary of Sightings<center></h3>
+</head>
 <body>
-  <p>Total Number of Sightings:{{ total_count }}</p>
-  <table border="1">
+  <p><center>Total Number of Sightings:{{ total_count }}<center></p>
+  <p><table class="table table-striped">
     <tr>
       <th></th>
       <th>True</th>
@@ -11,35 +18,38 @@
       <th>Pct.</th>
     </tr>
     <tr>
-      <td>Running</td>	    
+      <th scope="row">Running</th>	    
       <td>{{ running_true }}</td>
       <td>{{ running_false }}</td>
       <td>{{ running_pct }}</td>
     </tr>
     <tr>
-      <td>Chasing</td>	    
+      <th scope='row'>Chasing</th>	    
       <td>{{ chasing_true }}</td>
       <td>{{ chasing_false }}</td>
       <td>{{ chasing_pct }}</td>
     </tr>
     <tr>
-      <td>Climbing</td>
+      <th scope='row'>Climbing</th>
       <td>{{ climbing_true }}</td>
       <td>{{ climbing_false }}</td>
       <td>{{ climbing_pct }}</td>
     </tr>
     <tr>
-      <td>Eating</td>
+      <th scope='row'>Eating</th>
       <td>{{ eating_true }}</td>
       <td>{{ eating_false }}</td>
       <td>{{ eating_pct }}</td>
     </tr>
     <tr>
-      <td>Foraging</td>
+      <th scope='row'>Foraging</th>
       <td>{{ foraging_true }}</td>
       <td>{{ foraging_false }}</td>
       <td>{{ foraging_pct }}</td>
     </tr>
-  </table>
+  </table></p>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
