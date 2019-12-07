@@ -83,23 +83,18 @@ class Squirrel(models.Model):
     )
 
     running = models.BooleanField(
-            help_text = _('Running'),
             default=False)
 
     chasing = models.BooleanField(
-            help_text = _('Chasing'),
             default=False)
 
     climbing = models.BooleanField(
-            help_text = _('Climbing'),
             default=False)
 
     eating = models.BooleanField(
-            help_text = _('Eating'),
             default=False)
 
     foraging = models.BooleanField(
-            help_text = _('Foraging'),
             default=False)
 
     other_activities = models.CharField(
@@ -108,35 +103,27 @@ class Squirrel(models.Model):
     )
 
     kuks = models.BooleanField(
-            help_text = _('Kuks'),
             default=False)
 
     quaas = models.BooleanField(
-            help_text = _('Quaas'),
             default=False)
 
     moans = models.BooleanField(
-            help_text = _('Moans'),
             default=False)
 
     tail_flags = models.BooleanField(
-            help_text = _('Tail Flags'),
             default=False)
 
     tail_twitches = models.BooleanField(
-            help_text = _('Tail Twitches'),
             default=False)
 
     approaches = models.BooleanField(
-            help_text = _('Approaches'),
             default=False)
 
     indifferent = models.BooleanField(
-            help_text = _('Indifferent'),
             default=False)
 
     runs_from = models.BooleanField(
-            help_text = _('Runs From'),
             default=False)
 
 
