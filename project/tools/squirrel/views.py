@@ -48,3 +48,10 @@ def update_squirrel(request,unique_squirrel_ID):
     }
 
     return render(request, 'squirrel/edit.html', context)
+
+def map(request):
+    squirrels = Squirrel.objects.all()
+    context = {
+            'squirrels':squirrels
+    }
+    return render(request, 'squirrel/map.html', context)
