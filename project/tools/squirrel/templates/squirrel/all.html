@@ -6,7 +6,7 @@
   <body>
   <a href="add/">>Add a New Squirrel</a>
   {% for squirrel in squirrels %}
-  <li>{{ squirrel.unique_squirrel_ID }}</li>
+  <li><a href ={% url 'squirrel:update' squirrel.ID %}>{{ squirrel.ID }}</a></li>
   {% endfor %}
   </body>
 </html>

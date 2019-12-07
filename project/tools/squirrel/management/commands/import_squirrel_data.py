@@ -24,7 +24,7 @@ class Command(BaseCommand):
             p = Squirrel(
                 latitude=item['X'],
                 longitude=item['Y'],
-                unique_squirrel_ID=item['Unique Squirrel ID'],
+                ID=item['Unique Squirrel ID'],
                 shift=item['Shift'],
                 date=datetime.date(int(str(item['Date'])[4:8]),int(str(item['Date'])[0:2]),int(str(item['Date'])[2:4])),
                 age=item['Age'],

@@ -12,8 +12,9 @@ class Squirrel(models.Model):
             max_length = 100,
     ) 
 
-    unique_squirrel_ID = models.CharField(
+    ID = models.CharField(
             max_length = 100,
+            primary_key = True,
     )     
 
     PM = 'PM'
