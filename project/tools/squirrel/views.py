@@ -5,6 +5,9 @@ from django.shortcuts import redirect
 from .models import Squirrel
 from .forms import SquirrelForm
 
+def index(request):
+    return render(request, 'squirrel/index.html')
+
 def all_squirrels(request):
     squirrels = Squirrel.objects.all()
     context = {
@@ -50,7 +53,7 @@ def update_squirrel(request,unique_squirrel_ID):
     return render(request, 'squirrel/edit.html', context)
 
 def map(request):
-    squirrels = Squirrel.objects.all()
+    squirrels = Squirrel.objects.order_by('?')[:100]
     context = {
             'squirrels':squirrels,
     }
