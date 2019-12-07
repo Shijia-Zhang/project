@@ -4,18 +4,15 @@ from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
     latitude = models.FloatField(
-            help_text = _("Latitude of Squirrel"),
             max_length = 100,
     )
 
 
     longitude = models.FloatField(
-            help_text = _("Longitudee of Squirrel"),
             max_length = 100,
     ) 
 
     unique_squirrel_ID = models.CharField(
-            help_text = _("Unique Squirrel ID"),
             max_length = 100,
     )     
 
@@ -28,72 +25,61 @@ class Squirrel(models.Model):
     )
 
     shift = models.CharField(
-            help_text = _('Shift of Date'),
             max_length = 8,
             choices=SHIFT_CHOICES,
             default=AM
     )
 
     date = models.DateField(
-            help_text=_('Date'),
     )
 
     ADULT = 'Adult'
     JUVENILE = 'Juvenile'
-    NONE = ''
 
     AGE_CHOICES = (
             (ADULT, 'Adult'),
             (JUVENILE, 'Juvenile'),
-            (NONE, 'None'),
     )
 
     age = models.CharField(
-            help_text=_('Age'),
             max_length = 100,
             choices=AGE_CHOICES,
-            default=NONE,
+            blank=True
     )
 
     BLACK = 'Black'
     GRAY = 'Gray'
     CINNAMON = 'Cinnamon'
-    NONE = ''
 
     COLOR_CHOICES = (
             (BLACK, 'Black'),
             (GRAY, 'Gray'),
             (CINNAMON, 'Cinnamon'),
-            (NONE, 'None'),
     )
 
     primary_fur_color = models.CharField(
-            help_text = _('Primary Color of Fur'),
             max_length = 100,
             choices=COLOR_CHOICES,
-            default=NONE,
+            blank=True
     )
     
     GROUND = 'Ground Plane'
     ABOVE = 'Above Ground'
-    NONE = ''
 
     LOCATION_CHOICES = (
             (GROUND, 'Ground Plane'),
             (ABOVE, 'Above Ground'),
-            (NONE, 'None'),
     )
 
     location = models.CharField(
-            help_text = _('Location'),
             max_length = 100,
             choices=LOCATION_CHOICES,
-            default=NONE,
+            blank=True
     )
 
     specific_location = models.CharField(
-            help_text = _('Specific Location'),
             max_length = 100,
+            blank=True
     )
 
     running = models.BooleanField(
@@ -117,8 +103,8 @@ class Squirrel(models.Model):
             default=False)
 
     other_activities = models.CharField(
-            help_text=_('Other Activities'),
             max_length = 100,
+            blank = True
     )
 
     kuks = models.BooleanField(
