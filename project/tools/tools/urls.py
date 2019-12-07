@@ -18,6 +18,6 @@ from django.urls import path, include
 from django.conf.urls import url
 
 urlpatterns = [
-    path('squirrel/', include(('squirrel.urls','squirrel'), namespace='squirrel')),
+    path('', include(('squirrel.urls','squirrel'), namespace='squirrel')),
     path('admin/', admin.site.urls),
 ]

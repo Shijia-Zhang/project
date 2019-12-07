@@ -22,8 +22,8 @@ class Command(BaseCommand):
         for item in data:
             #change the name#
             p = Squirrel(
-                latitude=item['X'],
-                longitude=item['Y'],
+                longitude=item['X'],
+                latitude=item['Y'],
                 ID=item['Unique Squirrel ID'],
                 shift=item['Shift'],
                 date=datetime.date(int(str(item['Date'])[4:8]),int(str(item['Date'])[0:2]),int(str(item['Date'])[2:4])),

@@ -17,12 +17,12 @@ def add_squirrel(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/squirrel/sightings/')
+            return redirect(f'/sightings/')
     if request.method == 'GET':
         form = SquirrelForm(request.GET)
         if form.is_valid():
             form.save()
-            return resirect(f'/squirrel/sighings/')
+            return resirect(f'/sighings/')
     else:
         form = SquirrelForm()
 
@@ -39,7 +39,7 @@ def update_squirrel(request,unique_squirrel_ID):
         form = SquirrelForm(request.POST, instance=squirrel)
         if form.is_valid():
             form.save()
-            return redirect(f'/squirrel/sightings/{unique_squirrel_ID}')
+            return redirect(f'/sightings/')
     else:
         form = SquirrelForm(instance=squirrel)
 
@@ -52,6 +52,6 @@ def update_squirrel(request,unique_squirrel_ID):
 def map(request):
     squirrels = Squirrel.objects.all()
     context = {
-            'squirrels':squirrels
+            'squirrels':squirrels,
     }
     return render(request, 'squirrel/map.html', context)
