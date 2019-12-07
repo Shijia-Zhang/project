@@ -2,6 +2,45 @@
 <html>
   <title>Stats of Sightings</title>
 <body>
-  <li>Count of sightings:{{ total_count }}</li>
-  <
+  <p>Num of Sightings:{{ total_count }}</p>
+  <table border="1">
+    <tr>
+      <th></th>
+      <th>True</th>
+      <th>False</th>
+      <th>Pct.</th>
+    </tr>
+    <tr>
+      <td>Running</td>	    
+      <td>{{ running_true }}</td>
+      <td>{{ running_false }}</td>
+      <td>{{ running_pct }}</td>
+    </tr>
+    <tr>
+      <td>Chasing</td>	    
+      <td>{{ chasing_true }}</td>
+      <td>{{ chasing_false }}</td>
+      <td>{{ chasing_pct }}</td>
+    </tr>
+    <tr>
+      <td>Climbing</td>
+      <td>{{ climbing_true }}</td>
+      <td>{{ climbing_false }}</td>
+      <td>{{ climbing_pct }}</td>
+    </tr>
+    <tr>
+      <td>Eating</td>
+      <td>{{ eating_true }}</td>
+      <td>{{ eating_false }}</td>
+      <td>{{ eating_pct }}</td>
+    </tr>
+    <tr>
+      <td>Foraging</td>
+      <td>{{ foraging_true }}</td>
+      <td>{{ foraging_false }}</td>
+      <td>{{ foraging_pct }}</td>
+    </tr>
+  </table>
+</body>
+</html>
 

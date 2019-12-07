@@ -4,9 +4,8 @@
     <title>All Sightings of Squirrels</title>
   </head>
   <body>
-  <p>
-  <a href="add/">>Add a New Squirrel</a>
-  </p>
+  <p><a href="add/">Add a New Squirrel</a></p>
+  <p><a href="stats/">Summary of Sightings</a></p>
   {% for squirrel in squirrels %}
   <li><a href ={% url 'squirrel:update' squirrel.ID %}>{{ squirrel.ID }}</a></li>
   {% endfor %}
