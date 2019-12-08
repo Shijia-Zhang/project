@@ -1,3 +1,4 @@
-__pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+__pycache__
+collected-static
+*.sqlite3
