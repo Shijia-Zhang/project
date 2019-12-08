@@ -36,4 +36,4 @@ Links to the project
 --------------------
 
 - Link to the repository for the project source code: https://github.com/Shijia-Zhang/project
-- Link to the server running the application: https://
+- Link to the server running the application: https://profound-jet-259601.appspot.com/
