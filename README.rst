@@ -10,10 +10,11 @@ Project description
 
 The project get the 2018 Central Park Squirrel Census data and can keep track of all the known squirrels on the map.
 
-A command could be used to import the data into the project: $ python manage.py import_squirrel_data /path/to/file.csv
+A command could be used to import the data into the project:: $ python manage.py import_squirrel_data /path/to/file.csv
 The 2018 Central Park Squirrel Census data has already been imported into the project.
-A command could be used to export the data out of the project: 
+A command could be used to export the data out of the project:: 
 $ python manage.py export_squirrel_data /path/to/file.csv
+
 A file named exportfile.csv has been exported out of the project.
 
 The project has several features:
