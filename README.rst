@@ -8,7 +8,7 @@ By: Project Group 32 | Members: Shijia Zhang, Xiaohang He | UNIs: sz2868, xh2441
 Project description
 -------------------
 
-The project get the 2018 Central Park Squirrel Census data and can keep track of all the known squirrels on the map.
+The project gets the 2018 Central Park Squirrel Census data and can keep track of all the known squirrels on the map.
 
 It is allowed to import data into the project and export data out of the project by using the codes below::
 
